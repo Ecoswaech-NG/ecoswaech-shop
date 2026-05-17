@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --radius: 0.75rem;
+  
+  /* DEFAULT (Light/Initial) Values */
+  --background: oklch(1 0 0);
+  --foreground: oklch(25.025% 0.12711 265);
+  --card: oklch(0.98 0.01 264);
+  --primary: oklch(0.65 0.25 285);
+  --border: oklch(0 0 0 / 10%);
+}
+
+/* Explicit DARK MODE values */
+[data-theme='dark'] {
+  --background: oklch(24.798% 0.12861 264.732);
+  --foreground: oklch(0.98 0.01 264);
+  --card: oklch(0.18 0.04 264);
+  --border: oklch(1 0 0 / 10%);
+}
+
+/* Map Tailwind variables */
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-border: var(--border);
+}
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s ease;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+}
+
+
+
+/* Keep controls usable but below app overlays */
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 400 !important;
+}

@@ -1,0 +1,335 @@
+{
+  "carDetails": [
+    {
+      "label": "Title",
+      "name": "listingTitle",
+      "fieldType": "text",
+      "required": true,
+      "column": 2,
+      "icon": "FaClipboardList"
+    },
+    {
+      "label": "Location",
+      "name": "location",
+      "fieldType": "dropdown",
+      "options":["Abia", "Adamawa", "Akwa-Ibom", "Anambra", "Bauchi", "Bayelsa", "Cross-River", "Abuja", "Lagos", "Ogun", "Oyo", "Enugu", "Delta", "Rivers", "Kaduna", "Kano"],
+      "required": true,
+      "column": 2,
+      "icon": "FaMapMarkerAlt"
+    },
+    {
+      "label": "Vehicle Type",
+      "name": "type",
+      "fieldType": "dropdown",
+      "options": ["Cars", "Motorcycle and Bicycles", "Vans and Buses", "Trucks", "Carts", "E-Mobility Gadgets", "ATV", "Boats", "Trailer and lifters"],
+      "required": true,
+      "column": 1,
+      "icon": "FaDollarSign"
+    },
+    {
+      "label": "Category",
+      "name": "category",
+      "fieldType": "dropdown",
+      "optionsByCategory": {
+        "Cars": [
+          "Sedan",
+          "SUV",
+          "Coupe",
+          "Convertible",
+          "Hatchback",
+          "Wagon",
+          "Crossover",
+          "Hybrid",
+          "Luxury"
+        ],
+        "Trucks": [
+          "Pickup Truck",
+          "Light Duty Truck",
+          "Heavy Duty Truck",
+          "Box Truck",
+          "Flatbed Truck",
+          "Mini Truck",
+          "Electric Truck"
+        ],
+        "Motorcycle and Bicycles": [
+          "Electric Bicycles (EBs)",
+          "Electric Mopeds (EMs)",
+          "EV Motorbikes (EVMs)",
+          "Scooter",
+          "Motorcycle",
+          "Tricycle"
+        ],
+        "Vans and Buses": [
+          "Minivan",
+          "Passenger Van",
+          "Cargo Van",
+          "Mini Bus",
+          "Shuttle Bus",
+          "Electric Van",
+          "Electric Bus"
+        ],
+        "Carts": [
+          "Golf Cart",
+          "Utility Cart",
+          "Electric Cart"
+        ],
+        "ATV": [
+          "All-Terrain Vehicle (ATV)",
+          "Quad Bike",
+          "Side-by-Side (UTV)",
+          "Electric ATV"
+        ],
+        "Boats": [
+          "Electric Boat",
+          "Speed Boat",
+          "Fishing Boat",
+          "Yacht",
+          "Pontoon Boat"
+        ],
+        "Trailer and lifters": [
+          "Car Trailer",
+          "Utility Trailer",
+          "Boat Trailer",
+          "Flatbed Trailer",
+          "Lift Truck",
+          "Forklift"
+        ],
+        "E-Mobility Gadgets": [
+          "Electric Cart",
+          "Electric Skateboard", 
+          "Electric Scooter", 
+          "Electric Unicycle", 
+          "Electric Hoverboard", 
+          "Electric Wheelchair"
+        ]
+      },
+      "required": true,
+      "column": 1,
+      "icon": "FaCar"
+    },
+    {
+      "label": "Make",
+      "name": "make",
+      "fieldType": "dropdown",
+      "required": true,
+      "optionsByCategory": {
+        "Sedan": ["Audi", "Aptera", "Avatr","BMW", "BYD", "Changan", "Chevrolet", "Fiat", "Ford", "Geely", "Genesis", "GMC", "Great Wall Motors", "Hyundai", "Jaguar", "Kia", "Li Auto", "Lucid", "Lexus","Mahindra", "Mercedes-Benz", "Mini", "Mitsubishi", "NIO", "Nissan", "Opel", "Peugeot", "Polestar", "Porsche", "Qoray", "Renault", "Rivian", "Sagle", "SAIC (MG)", "Tata", "Tesla", "Toyota", "Volkswagen", "Volvo", "Xiaomi", "XPeng", "Zeekr"],
+        "SUV": ["Toyota", "Honda", "Hyundai", "Kia", "Nissan", "Mazda", "Chevrolet", "Ford", "Volkswagen", "BMW", "Mercedes-Benz", "Audi", "Lexus", "Jeep", "Sagle", "Qoray", "Innosson", "Nord", "Xiaomi", "Lucid"],
+        "Coupe": ["BMW", "Mercedes-Benz", "Audi", "Ford", "SAIC (MG)", "Porsche", "Jaguar", "Lexus", "Tesla"],
+        "Crossover": ["Toyota", "Honda", "Hyundai", "Kia", "Nissan", "Mazda", "Chevrolet", "Ford", "Volkswagen"],
+        "Hybrid Car": ["Toyota", "Honda", "Hyundai", "Kia", "Ford"],
+        "Luxury Car": ["BMW", "Mercedes-Benz", "Audi", "Lexus", "Jaguar", "Porsche"],
+        "Pickup Truck": ["Ford", "Chevrolet", "Ram", "GMC", "Toyota", "Nissan"],
+        "Light Duty Truck": ["Ford", "Chevrolet", "Ram", "GMC", "Toyota", "Nissan"],
+        "Heavy Duty Truck": ["Ford", "Chevrolet", "Ram", "GMC"],
+        "Box Truck": ["Isuzu", "Hino", "Ford", "Chevrolet"],
+        "Flatbed Truck": ["Isuzu", "Hino", "Ford", "Chevrolet"],
+        "Mini Truck": ["Suzuki", "Daihatsu", "Honda"],
+        "Electric Truck": ["Tesla", "Rivian", "Ford"],
+        "Electric Bicycles (EBs)": ["Specialized", "Trek", "Giant", "Rad Power Bikes"],
+        "Electric Mopeds (EMs)": ["NIU", "Super Soco", "Segway"],
+        "EV Motorbikes (EVMs)": ["Zero Motorcycles", "Energica", "Harley-Davidson"],
+        "Scooter": ["Honda", "Yamaha", "Vespa", "Suzuki"],
+        "Motorcycle": ["Honda", "Yamaha", "Suzuki", "Kawasaki", "Harley-Davidson", "Ducati", "BMW"],
+        "Tricycle": ["Piaggio", "Bajaj"],
+        "Minivan": ["Toyota", "Honda", "Kia", "Chrysler", "Dodge"],
+        "Passenger Van": ["Ford", "Mercedes-Benz", "Nissan", "Chevrolet"],
+        "Cargo Van": ["Ford", "Mercedes-Benz", "Nissan", "Chevrolet"],
+        "Mini Bus": ["Toyota", "Nissan", "Hyundai"],
+        "Shuttle Bus": ["Ford", "Chevrolet", "Blue Bird"],
+        "Electric Van": ["Mercedes-Benz", "Ford", "Nissan"],
+        "Electric Bus": ["BYD", "Proterra", "NFI Group"],
+        "Golf Cart": ["Club Car", "Yamaha", "EZGO"],
+        "Utility Cart": ["Club Car", "Yamaha", "EZGO"],
+        "Electric Cart": ["Club Car", "Yamaha", "EZGO"],
+        "All-Terrain Vehicle (ATV)": ["Polaris", "Can-Am", "Honda", "Yamaha"],
+        "Quad Bike": ["Polaris", "Can-Am", "Honda", "Yamaha"],
+        "Side-by-Side (UTV)": ["Polaris", "Can-Am", "Honda", "Yamaha"],
+        "Electric ATV": ["Polaris", "Can-Am"],
+        "Electric Boat": ["Torqeedo", "Pure Watercraft"],
+        "Speed Boat": ["Yamaha", "Bayliner"],
+        "Fishing Boat": ["Lund", "Tracker"],
+        "Yacht": ["Azimut", "Sunseeker"],
+        "Pontoon Boat": ["Bennington", "Sun Tracker"],
+        "Car Trailer": ["Big Tex", "Carry-On"],
+        "Utility Trailer": ["Big Tex", "Carry-On"],
+        "Boat Trailer": ["EZ Loader", "Venture"],
+        "Flatbed Trailer": ["Big Tex", "PJ Trailers"],
+        "Lift Truck": ["Toyota", "Hyster"],
+        "Forklift": ["Toyota", "Hyster"]
+      },
+      "column": 1,
+      "icon": "FaIndustry"
+    },
+    
+    {
+  "label": "Model",
+  "name": "model",
+  "fieldType": "dropdown",
+  "required": true,
+  "optionsByMake": {
+    "Audi": ["e-tron", "e-tron GT", "Q4 e-tron", "Q6 e-tron", "Q8 e-tron"],
+    "Aptera": ["Aptera 2e", "Aptera 3", "Aptera 4", "Aptera 5", "Aptera 6"],
+    "Avatr": ["Avatr 11", "Avatr 12", "Avatr 13", "Avatr 14", "Avatr 15"],
+    "BMW": ["i3", "i4", "i5", "i7", "iX", "iX1", "iX3"],
+    "BYD": ["Atto 3", "Dolphin", "Han EV", "Seagull", "Seal", "Tang EV"],
+    "Changan": ["Deepal S7", "Deepal SL03"],
+    "Chevrolet": ["Blazer EV", "Bolt EUV", "Bolt EV", "Equinox EV", "Silverado EV"],
+    "Fiat": ["500e"],
+    "Ford": ["E-Transit", "F-150 Lightning", "Mustang Mach-E"],
+    "Geely": ["Geometry A", "Geometry C"],
+    "Genesis": ["GV60", "GV70 Electric", "GV80 Electric"],
+    "GMC": ["Hummer EV", "Sierra EV"],
+    "Great Wall Motors": ["Ora Funky Cat", "Ora Good Cat"],
+    "Hyundai": ["Ioniq 5", "Ioniq 6", "Ioniq Electric", "Kona Electric"],
+    "Innosson": ["Crossover", "SUV", "Pickup"],
+    "Jaguar": ["I-PACE"],
+    "Kia": ["EV6", "EV9", "Niro EV", "Soul EV"],
+    "Li Auto": ["L7", "L8", "L9", "Li ONE"],
+    "Lexus": ["RZ 450e", "UX 300e"],
+    "Lucid": ["Air", "Gravity"],
+    "Mahindra": ["BE.05", "XUV.e8", "XUV400"],
+    "Mercedes-Benz": ["EQA", "EQB", "EQC", "EQE", "EQS", "EQS SUV"],
+    "Mini": ["Mini Countryman Electric", "Mini Electric"],
+    "NIO": ["EC6", "ES6", "ES8", "ET5", "ET7"],
+    "Nissan": ["Ariya", "Leaf"],
+    "Opel": ["Corsa-e", "Mokka-e"],
+    "Peugeot": ["e-2008", "e-208", "e-308"],
+    "Polestar": ["Polestar 1", "Polestar 2", "Polestar 3", "Polestar 4"],
+    "Porsche": ["Macan Electric", "Taycan"],
+    "Qoray": ["Qoray EV", "Qoray Pro", "Qoray Max"],
+    "Renault": ["Megane E-Tech", "Zoe"],
+    "Rivian": ["R1S", "R1T"],
+    "Sagle": ["Sagle EV", "Sagle Pro", "Sagle Max"],
+    "SAIC (MG)": ["MG4 Electric", "MG5 EV", "MG ZS EV"],
+    "Tata": ["Nexon EV", "Tiago EV", "Tigor EV"],
+    "Tesla": ["Cybertruck", "Model 3", "Model S", "Model X", "Model Y", "Roadster"],
+    "Toyota": ["bZ4X", "bZ3", "bZ2", "bZ1"],
+    "Volkswagen": ["ID.3", "ID.4", "ID.5", "ID.6", "ID.7", "ID.Buzz"],
+    "Volvo": ["C40 Recharge", "EX30", "EX90", "XC40 Recharge"],
+    "Xiaomi": ["SU7", "SU7 Pro", "SU7 Max", "SU7 Ultra"],
+    "XPeng": ["G3", "G6", "G9", "P5", "P7"],
+    "Zeekr": ["001", "009", "X"]
+
+      },
+      "column": 1,
+      "icon": "FaCarSide"
+    },
+    {
+      "label": "Year",
+      "name": "year",
+      "fieldType": "dropdown",
+      "options":[2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027],
+      "required": true,
+      "column": 1,
+      "icon": "FaCalendarAlt"
+    },
+    {
+      "label": "Condition",
+      "name": "condition",
+      "fieldType": "dropdown",
+      "options": ["Brand New", "Used", "Certified Pre-Owned"],
+      "required": true,
+      "column": 1,
+      "icon": "FaCogs"
+    },
+    {
+      "label": "Drive Type",
+      "name": "driveType",
+      "fieldType": "dropdown",
+      "options": ["FWD", "RWD", "AWD", "4WD"],
+      "required": true,
+      "column": 1,
+      "icon": "FaRoad"
+    },
+    {
+      "label": "Range",
+      "name": "range",
+      "fieldType": "number",
+      "required": true,
+      "column": 1,
+      "icon": "FaCogs"
+    },
+    {
+      "label": "Charger Connector Type",
+      "name": "power",
+      "fieldType": "dropdown",
+      "options":["Type 1 (SAE J1772)", "Type 2(Mennekes)", "CHAdeMO", "CCS 1(Combined Charging System)", "CCS 2(Combined Charging System)", "GB/T", "NACS (Tesla Supercharger)"],
+      "required": true,
+      "column": 1,
+      "icon": "FaGasPump"
+    },
+    {
+      "label": "Mileage",
+      "name": "mileage",
+      "fieldType": "number",
+      "required": true,
+      "column": 1,
+      "icon": "FaTachometerAlt"
+    },
+    {
+      "label": "Battery Size",
+      "name": "batterySize",
+      "fieldType": "text",
+      "column": 1,
+      "icon": "FaWrench"
+    },
+    {
+      "label": "Max Speed",
+      "name": "maxSpeed",
+      "fieldType": "number",
+      "column": 1,
+      "icon": "FaCircle"
+    },
+    {
+      "label": "Color",
+      "name": "color",
+      "fieldType": "dropdown",
+      "required": true,
+      "options": ["Black", "Blue", "Gold", "Pink", "Red", "Silver", "White", "Off-White",
+       "Tan", "Green", "Yellow", "Purple", "Orange", "Brown"],
+      "column": 2,
+      "icon": "FaPalette"
+    },
+    {
+      "label": "Door",
+      "name": "door",
+      "fieldType": "number",
+      "required": true,
+      "column": 1,
+      "icon": "FaDoorClosed"
+    },
+    {
+      "label": "VIN",
+      "name": "vin",
+      "fieldType": "text",
+      "required": true,
+      "column": 1,
+      "icon": "FaIdCard"
+    },
+    {
+      "label": "Selling Price",
+      "name": "sellingPrice",
+      "fieldType": "text",
+      "required": true,
+      "column": 1,
+      "icon": "FaMoneyBillAlt"
+    },
+    {
+      "label": "Offer Type",
+      "name": "offerType",
+      "fieldType": "dropdown",
+      "options": ["Pre Order", "Sale", "Finance"],
+      "column": 2,
+      "icon": "FaTags"
+    },
+    {
+      "label": "Description",
+      "name": "listingDescription",
+      "fieldType": "textarea",
+      "required": true,
+      "column": 2,
+      "icon": "FaFileAlt"
+    }
+  ]
+}
