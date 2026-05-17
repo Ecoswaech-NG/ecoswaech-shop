@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import { useEffect, useState } from "react";
 
+// Charger details page - displays individual charger listing
 interface Props {
   params: Promise<{ id: string }>;
 }

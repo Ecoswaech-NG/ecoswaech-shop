@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import { useEffect, useState } from "react";
 
+// Accessory details page - displays individual accessory listing
 interface Props {
   params: Promise<{ id: string }>;
 }
