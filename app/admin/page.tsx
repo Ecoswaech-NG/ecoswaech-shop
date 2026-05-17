@@ -4,6 +4,8 @@
 import { prisma } from "@/lib/prisma";
 import AdminStationsClient from "@/components/charging-stations/AdminStationsClient";
 
+export const dynamic = "force-dynamic";
+
 export default async function AdminStationsPage() {
   const [pending, approved, all] = await Promise.all([
     prisma.chargingStation.count({ where: { status: "pending"  } }),

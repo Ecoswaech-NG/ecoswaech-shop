@@ -146,9 +146,9 @@ export default function StationDrawer({ station, onClose, userLat, userLng }: Pr
               </p>
             </div>
             <div className="bg-gray-50 dark:bg-[#0d1117] rounded-xl p-3">
-              <p className="text-[10px] text-gray-400 dark:text-[#8b949e]">Hours</p>
+              <p className="text-[10px] text-gray-400 dark:text-[#8b949e]">Uptime</p>
               <p className="font-bold text-sm text-gray-900 dark:text-white flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-blue-500" /> {station.is24Hours ? "24/7" : station.operatingHours}
+                <Clock className="w-3.5 h-3.5 text-blue-500" /> {station.uptimePercent.toFixed(1)}%
               </p>
             </div>
           </div>
