@@ -15,7 +15,7 @@ async function verifyToken(token: string) {
 const PROTECTED_ROUTES = ["/dashboard", "/passport"];
 const AUTH_ROUTES      = ["/login", "/register"];
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   const token   = req.cookies.get("swaech-token")?.value;
