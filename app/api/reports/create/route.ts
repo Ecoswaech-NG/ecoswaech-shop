@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     const sohScore = calculateSoH(voltage, mileage);
     const grade = getGrade(sohScore);
 
-    const report = await prisma.$transaction(async (tx) => {
+    const report = await prisma.$transaction(async (tx: any) => {
       const vehicle = await tx.vehicle.create({
         data: { make, model, year, ownerId: session.userId },
       });
