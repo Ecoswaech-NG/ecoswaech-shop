@@ -36,9 +36,9 @@ export async function GET(req: Request) {
       take: limit,
     });
 
-    const formatted = listings.map((listing) => ({
+    const formatted = listings.map((listing: any) => ({
       ...listing,
-      images: listing.images.map((img) => ({ imageUrl: img.imageUrl })),
+      images: listing.images.map((img: any) => ({ imageUrl: img.imageUrl })),
     }));
 
     return NextResponse.json({ listings: formatted });
