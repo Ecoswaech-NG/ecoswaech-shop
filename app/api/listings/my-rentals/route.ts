@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     });
 
     return NextResponse.json({ 
-      rentals: rentals.map(rental => ({
+      rentals: rentals.map((rental: any) => ({
         id: rental.id,
         vehicle: rental.vehicle,
         location: rental.location,
