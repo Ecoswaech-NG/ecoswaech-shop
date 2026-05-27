@@ -23,7 +23,7 @@ export async function GET(req: Request) {
 
     // Normalise both into a unified shape
     const combined = [
-      ...chargers.map((c) => ({
+      ...chargers.map((c: any) => ({
         id:       c.id,
         itemType: "charger" as const,
         name:     `${c.brand} ${c.model}`,
@@ -33,9 +33,9 @@ export async function GET(req: Request) {
         power:    c.power,
         price:    c.price,
         location: c.location,
-        images:   c.images.map((img) => ({ url: img.imageUrl })),
+        images:   c.images.map((img: any) => ({ url: img.imageUrl })),
       })),
-      ...accessories.map((a) => ({
+      ...accessories.map((a: any) => ({
         id:       a.id,
         itemType: "accessory" as const,
         name:     a.name,
@@ -45,7 +45,7 @@ export async function GET(req: Request) {
         power:    null,
         price:    a.price,
         location: a.location,
-        images:   a.images.map((img) => ({ url: img.imageUrl })),
+        images:   a.images.map((img: any) => ({ url: img.imageUrl })),
       })),
     ];
 
