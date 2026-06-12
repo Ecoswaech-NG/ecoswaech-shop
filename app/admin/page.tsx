@@ -16,10 +16,10 @@ export default async function AdminStationsPage() {
     }),
   ]);
 
-  const stations = all.map((s: any) => ({
+  const stations = all.map((s) => ({
     ...s,
     avgRating: s.stationReviews.length
-      ? s.stationReviews.reduce((sum: number, r: any) => sum + r.rating, 0) / s.stationReviews.length
+      ? s.stationReviews.reduce((sum: number, r) => sum + r.rating, 0) / s.stationReviews.length
       : null,
   }));
 
