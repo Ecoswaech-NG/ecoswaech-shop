@@ -24,9 +24,9 @@ export default async function CategoryPage({ params }: Props) {
     take:    40,
   });
 
-  const formatted: SearchListing[] = listings.map((l) => ({
+  const formatted: SearchListing[] = listings.map((l: any) => ({
     ...l,
-    images: l.images.map((img) => ({ imageUrl: img.imageUrl })),
+    images: l.images.map((img: any) => ({ imageUrl: img.imageUrl })),
   }));
 
   return (
