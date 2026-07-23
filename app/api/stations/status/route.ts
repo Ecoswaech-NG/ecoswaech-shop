@@ -62,7 +62,7 @@ export async function GET() {
     const TEN_MIN = 10 * 60 * 1000;
     const now     = Date.now();
 
-    const withLive = stations.map((s) => ({
+    const withLive = stations.map((s: any) => ({
       ...s,
       isLive: s.lastPingAt
         ? now - new Date(s.lastPingAt).getTime() < TEN_MIN
