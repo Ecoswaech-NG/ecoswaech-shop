@@ -56,7 +56,12 @@ export default async function PublicProfilePage({ params }: Props) {
     ? reviews.reduce((s: number, r: { rating: number }) => s + r.rating, 0) / reviews.length
     : null;
 
-  const initials = user.fullName.split(" ").map((n) => n[0]).join("").toUpperCase().slice(0, 2);
+  const initials = user.fullName
+    .split(" ")
+    .map((n: string) => n[0])
+    .join("")
+    .toUpperCase()
+    .slice(0, 2);
 
   const GRADE_COLOR: Record<string, string> = {
     A: "#3fb950", B: "#58a6ff", C: "#d29922", D: "#f85149",
