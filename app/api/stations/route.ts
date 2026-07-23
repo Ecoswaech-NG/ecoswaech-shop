@@ -42,18 +42,18 @@ export async function GET(req: Request) {
   });
 
   // Attach distance and filter by radius if user location provided
-  const withDistance = stations.map((s) => {
+  const withDistance = stations.map((s: any) => {
     const dist = userLat && userLng
       ? haversine(userLat, userLng, s.lat, s.lng)
       : null;
     const avgRating = s.stationReviews.length
-      ? s.stationReviews.reduce((sum, r) => sum + r.rating, 0) / s.stationReviews.length
+      ? s.stationReviews.reduce((sum: number, r: any) => sum + r.rating, 0) / s.stationReviews.length
       : null;
     return { ...s, distanceKm: dist, avgRating, reviewCount: s.stationReviews.length };
-  }).filter((s) => {
+  }).filter((s: any) => {
     if (!userLat || !userLng || !s.distanceKm) return true;
     return s.distanceKm <= radius;
-  }).sort((a, b) => (a.distanceKm ?? 999) - (b.distanceKm ?? 999));
+  }).sort((a: any, b: any) => (a.distanceKm ?? 999) - (b.distanceKm ?? 999));
 
   return NextResponse.json({ stations: withDistance });
 }
