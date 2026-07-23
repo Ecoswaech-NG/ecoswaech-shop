@@ -33,7 +33,7 @@ export default async function ListingDetailsPage({ params }: Props) {
 
   if (!listing) return notFound();
 
-  const images  = listing.images.map((img) => ({ imageUrl: img.imageUrl }));
+  const images  = listing.images.map((img: { imageUrl: string }) => ({ imageUrl: img.imageUrl }));
   const features = listing.features as Record<string, boolean> | null;
 
   return (
